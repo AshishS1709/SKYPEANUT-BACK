@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: aviation-weather-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PORT
+        value: 10000
+    autoDeploy: true
+    repo: https://github.com/AshishS1709/SKYPEANUT-BACK.git
+    branch: main
